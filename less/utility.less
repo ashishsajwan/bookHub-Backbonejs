@@ -1,0 +1,84 @@
+div.centroid {
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  display: -webkit-inline-box;
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  /* vertical centering for legacy, horizontal centering for modern */
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  /* modern Flexbox only */
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  /* legacy Flexbox only */
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+}
+
+div.align-middle,div.align-top {
+  white-space: nowrap;
+}
+
+div.align-middle div.aligned-child {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+div.align-top div.aligned-child{
+  vertical-align: top;
+  display: inline-block;
+}
+
+div.aligned-child {
+  white-space: initial;  /* need to reset it back to initial */
+}
+
+/* handy classes*/
+// put custom classes definations here
+
+//  use following classes to get rid of padding
+// .no-padding-left
+// .no-padding-right
+// .no-padding-bottom
+// .no-padding-top
+// .no-padding - to remove padding from all sides
+
+.no- (@property,@side) when (@side = all) {
+    .no-@{property} {
+            @{property}: 0 !important;
+        }
+
+}
+
+.no- (@property,@side) when not (@side = all) {
+    .no-@{property}-@{side} {
+            @{property}-@{side}: 0 !important;
+        }
+
+}
+
+
+.no-(padding,left);
+.no-(padding,right);
+.no-(padding,top);
+.no-(padding,bottom);
+.no-(padding,all);
+
+.no-(margin,left);
+.no-(margin,right);
+.no-(margin,top);
+.no-(margin,bottom);
+.no-(margin,all);
+
+.no-wrap {
+  white-space: nowrap;
+}

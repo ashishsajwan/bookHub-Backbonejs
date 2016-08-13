@@ -1,0 +1,194 @@
+@import "utility.less";
+#app-header-container, #app-body-container {
+  font-size: 14px;
+  border-bottom: 2px solid #B3B3B3;
+}
+
+#logo-container, #stats-container {
+  line-height: 60px;
+  div {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+#logo-container {
+  font-size: 1.4em;
+  h1 {
+    border: 2px solid #656668;
+    border-radius: 5px;
+    font-size: 2em !important;
+    padding: 3px 10px;
+  }
+  h1, h3 {
+    font-size: 1.8em;
+    margin: 0;
+    color: #81C51F;
+  }
+  .small {
+    color: #587847;
+    vertical-align: sub;
+  }
+}
+
+#stats-container {
+  font-size: 1.4em;
+}
+
+#stats-box {
+  border: 2px solid #56853B;
+  border-radius: 10px;
+  background: #E3F0DB;
+  padding: 0 15px;
+  line-height: 40px;
+  div {
+    padding: 0 15px;
+  }
+}
+
+#app-body-container {
+  background-color: #E7E8E7;
+}
+
+#search-container {
+  input {
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px;
+    border: 2px solid #017997;
+  }
+}
+#books-list-view-container {
+  border-right: 1px solid #B3B3B3;
+  padding: 10px
+}
+#books-list-container {
+  min-height: 200px;
+  margin: 10px 0;
+}
+#show-bookmarks {
+  padding: 5px;
+  &.active {
+    background: #93c46b;
+  }
+}
+#action-buttons-container {
+  border-top: 2px solid #017997;
+  padding: 10px 0 0 0;
+  div {
+    display: inline-block;
+  }
+  #button-group {
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 7px;
+    margin: 0 10px;
+    .active {
+      background: #D1EBC2;
+    }
+    .button {
+      border-color: #D1EBC2;
+      padding: 0px 30px;
+    }
+  }
+}
+
+.button {
+  cursor: pointer;
+  border: 2px solid #3C6227;
+  padding: 8px;
+  color: #3C6227;
+  border-radius: 5px;
+  background-color: #F8F7F7;
+  margin: 0 10px;
+}
+
+.book-list-view {
+  cursor: pointer;
+  border: 1px solid #66A245;
+  margin-bottom: 10px;
+  padding: 5px 10px 0 10px;
+  border-radius: 5px;
+  .book-name {
+    white-space: nowrap;
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &.active {
+    background: #D1EBC2;
+  }
+  div {
+    display: inline-block;
+  }
+  .book-state {
+    float: right;
+    color: #666666;
+  }
+  .book-price {
+    float: right;
+    margin: 0 10px;
+    color: #666666;
+  }
+}
+
+#book-big-view {
+  padding: 10px;
+  #book-description-container {
+    margin: 10px 0;
+    #description-text {
+      color: #A38249;
+      padding: 10px;
+      background: #FCFCCF;
+    }
+  }
+  #action-buttons-container {
+    border: none;
+    overflow: auto;
+    font-size: 1.4em;
+  }
+  #map {
+    height: 200px;
+    background: #d7d7d7;
+  }
+  #bookmark-book {
+    &.bookmark {
+      background: #93c46b
+    }
+  }
+  .current-location {
+    margin: 10px 0;
+  }
+  .book-details {
+    border: 1px solid #6B6B6B;
+    border-radius: 5px;
+    font-size: 1.3em;
+    background: #EEEEDC;
+    .book-type {
+      text-transform: capitalize;
+    }
+    .no-wrap {
+      padding: 5px 15px;
+    }
+    .book-name {
+      background: #6B6B6B;
+      font-size: 1.2em;
+      color: #FFFFFF;
+    }
+    #rating-star-container {
+      display: inline-block;
+      vertical-align: middle;
+      #rating-star-window {
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+#book-thumbnail {
+  img {
+    width: 200px;
+    height: 200px;
+  }
+}
